@@ -1,0 +1,17 @@
+class Solution {
+    public void rotate(int[] arr) {
+        // code here
+        int newArr[] = new int[arr.length];
+        newArr[0] = arr[arr.length-1];
+        
+        //putting the rest element
+        for(int i=1; i<arr.length; i++){
+            newArr[i] = arr[i-1];
+        }
+        
+        //putting all element of newArr into arr
+        for(int i=0; i<arr.length; i++){
+            arr[i] = newArr[i];
+        }
+    }
+}
