@@ -1,0 +1,16 @@
+class Solution {
+    public static int doUnion(int arr1[], int arr2[]) {
+        // Your code here
+        //using hashset to store all the unique element
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0; i<arr1.length; i++){
+            set.add(arr1[i]);
+        }
+        
+        for(int i=0; i<arr2.length; i++){
+            set.add(arr2[i]);
+        }
+        
+        return set.size();
+    }
+}
