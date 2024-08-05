@@ -1,0 +1,33 @@
+class Solution {
+
+    // arr: input array
+    // Function to find the sum of contiguous subarray with maximum sum.
+    long maxSubarraySum(int[] arr) {
+
+        // Your code here
+        int n = arr.length;
+        
+        long maxh = 0;
+        long maxf = arr[0];
+        
+        //iterating over the array
+        for(int i=0; i<arr.length; i++){
+            //updating the max sum till current index
+            maxh += arr[i];
+            
+            //storing the max sum so far by choosing maximum between max
+            //sum so far and max sum till current index
+            if(maxf < maxh){
+                maxf = maxh;
+            }
+            
+            //if max sum till current index is negative , we do not need to add
+            //it to result so we update it to zero
+            if(maxh < 0){
+                maxh = 0;
+            }
+        }
+        
+        return maxf;
+    }
+}
