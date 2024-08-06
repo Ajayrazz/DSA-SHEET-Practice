@@ -1,0 +1,23 @@
+class GFG
+{
+    static void rotate(int matrix[][]) 
+    {
+        // Code Here
+        int newMat[][] = new int[matrix.length][matrix[0].length];
+        
+        int col = matrix[0].length-1;
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+                newMat[i][j] = matrix[j][col];
+            }
+            col--;
+        }
+        
+        //putting element of newMat into matrix
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+                matrix[i][j] = newMat[i][j];
+            }
+        }
+    }
+}
