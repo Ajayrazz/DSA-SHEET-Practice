@@ -1,0 +1,17 @@
+class Solution {
+    int isPalindrome(String S) {
+        // code here
+        int len = S.length();
+        int mid = len/2;
+        
+        int lastIdx = len-1;
+        for(int i=0; i<mid; i++){
+            if(S.charAt(i) != S.charAt(lastIdx)){
+                return 0;
+            }
+            lastIdx--;
+        }
+        
+        return 1;
+    }
+};
