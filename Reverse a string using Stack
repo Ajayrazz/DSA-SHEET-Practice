@@ -1,0 +1,22 @@
+class Solution {
+    
+    public String reverse(String S){
+        //code here
+        Stack<Character> stack = new Stack<>();
+        //create a stringbuilder 
+        StringBuilder sb = new StringBuilder();
+        
+        //Using for loop to put element in stack
+        for(int i=0; i<S.length(); i++){
+            stack.push(S.charAt(i));
+        }
+        
+        //Putting stack element into stringbuilder sb
+        while(!stack.isEmpty()){
+            sb.append(stack.pop());
+        }
+        
+        return sb.toString();
+    }
+
+}
